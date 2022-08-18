@@ -29,12 +29,14 @@ a{
     text-decoration: none;
 }
 .nav-links {
-    position: relative;
     color: #0087ca;
 }
 .nav-links > a {
     color: var(--linklerin-rengi);
     padding: 10px;
+    margin-left: 5px;
+    position: relative;
+
 }
 .nav-links > a::after{
     content: '';
@@ -43,7 +45,7 @@ a{
     height: 2px;
     left: 0;
     bottom:0;
-    background: black;
+    border-bottom: 1px solid #000;
     transform: scaleX(0);
     transform-origin:bottom right;
     transition: transform 0.25s ease-out; 
