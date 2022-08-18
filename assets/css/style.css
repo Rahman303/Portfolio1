@@ -1,0 +1,63 @@
+:root {
+    --linklerin-rengi: #000;
+}
+@import url('reset.css');
+@import url(font.css);
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    padding: 0 8%;
+    min-height: 100vh;
+    font-family: 'Roboto-Regular';
+
+}
+header {
+height: 10.5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.fa-bars {
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+.nav-links {
+    position: relative;
+    color: #0087ca;
+}
+.nav-links > a {
+    color: var(--linklerin-rengi);
+    padding: 10px;
+}
+.nav-links > a::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom:0;
+    background: black;
+    transform: scaleX(0);
+    transform-origin:bottom right;
+    transition: transform 0.25s ease-out; 
+}
+.nav-links > a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+@media (max-width:768px) {
+    .nav-links {
+        display: none;
+    }
+    .fa-bars {
+        display: flex;
+        font-size: 24px;
+    }
+}
